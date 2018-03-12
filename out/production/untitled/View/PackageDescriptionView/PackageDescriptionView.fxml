@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.PackageDescriptionView.PackageDescriptionView">
+    <BorderPane layoutY="21.0" prefHeight="778.0" prefWidth="1067.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+        <center>
+          <TreeTableView fx:id="packageTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #aac1ff;" BorderPane.alignment="CENTER">
+              <columns>
+                  <TreeTableColumn fx:id="colOwnerEmail" prefWidth="75.0" text="Owner" />
+                  <TreeTableColumn fx:id="colPackageId" prefWidth="75.0" text="Package ID" />
+                  <TreeTableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
+                  <TreeTableColumn fx:id="colStartDate" prefWidth="75.0" text="Start Date" />
+                  <TreeTableColumn fx:id="colEndDate" prefWidth="75.0" text="End Date" />
+                  <TreeTableColumn fx:id="colProductId" prefWidth="75.0" text="Product ID" />
+                  <TreeTableColumn fx:id="colCategory" prefWidth="75.0" text="Category" />
+                  <TreeTableColumn fx:id="colDescription" prefWidth="75.0" text="Description" />
+              </columns>
+              <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+              </columnResizePolicy>
+          </TreeTableView>
+        </center>
+        <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0" style="-fx-background-color: #aac1ff;" BorderPane.alignment="CENTER">
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <Button fx:id="rentBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#rentPackage" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: bf2e1b;" text="Rent" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="tradeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#tradePackage" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: bf2e1b;" text="Trade" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="loginBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#logIn" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #bf6c1a;" text="LogIn" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            <Button fx:id="loginBtn1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#Backtosearch" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #bf6c1a;" text="Back to search" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+                <Button fx:id="userViewBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMousePressed="#goToUserView" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #bf6c1a;" text="User View" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </bottom>
+    </BorderPane>
+    <Label layoutY="778.0" prefHeight="21.0" prefWidth="1067.0" style="-fx-background-color: #FF6600;" />
+    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="1067.0" style="-fx-background-color: #FF6600;" text="Package Description" textAlignment="CENTER" textFill="WHITE" />
+</AnchorPane>
